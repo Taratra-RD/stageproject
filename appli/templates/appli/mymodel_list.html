@@ -1,0 +1,23 @@
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<ul> 
+    {% for object in object_list %} 
+
+    <li>{{ object.title }}</li> 
+    <li>{{ object.description }}</li> 
+    <a href="http://localhost:8000/appli/<id>/delete">
+        <button type="btn btn-primary">
+            <a href="{% url 'delete' object.pk %}">Delete</a>
+        </button>
+        <button type="btn btn-primary">
+            <a href="{% url 'detail' object.pk %}">Detail</a>
+        </button>
+        <button type="btn btn-primary">
+            <a href="{% url 'update' object.pk %}">update</a>
+        </button>
+    </a>
+    <hr/> 
+ 
+    {% empty %} 
+    <li>No objects yet.</li> 
+    {% endfor %} 
+</ul> 

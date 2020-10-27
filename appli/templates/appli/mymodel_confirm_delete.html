@@ -1,0 +1,8 @@
+<link rel="stylesheets" type="text/css" href="static/style.css">
+<form class="formulaire" method="post">
+    {% csrf_token %} 
+    <fieldset class="field">
+        <p class="deletequestion">Are you sure you want to delete "{{ object }}"?</p> 
+        <input class="button" type="submit" value="Confirm"> 
+    </fieldset>
+</form>

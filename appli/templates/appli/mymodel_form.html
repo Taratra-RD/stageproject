@@ -1,0 +1,32 @@
+<link rel="stylesheets" type="text/css" href="style.css">
+<h1 class="hello">Hello world!</h1>
+<form class="formulaire" method="POST" enctype="multipart/form-data"> 
+    {% csrf_token %} 
+    <fieldset class="field">
+        <div class="form-group">
+            <label>titre</label><br>
+            {{form.title}} <br>
+        </div>
+        <div class="form-group">
+            <label>description</label> <br>
+            {{form.description}} <br>
+        </div>
+        <input class="btn btn-primary" type="submit" value="Save"> 
+    </fieldset>
+    
+</form> 
+<style>
+    .field
+{
+    background-color: gray;
+    width: 500px;
+    position: relative;
+    left:450px;
+}
+    .form-group
+{
+    position: relative;
+    padding-left: 50px;
+    margin-left: 25px;
+}
+</style>
